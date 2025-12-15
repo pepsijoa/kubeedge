@@ -1,0 +1,9 @@
+paho-mqtt==1.6.1
+pyserial>=3.5
+pytz>=2024.1
+# Raspberry Pi 4B (BCM2711) 지원을 위한 최신 버전
+RPi.GPIO>=0.7.1
+adafruit-blinka>=8.68.0
+Adafruit-PlatformDetect>=3.70.1
+adafruit-circuitpython-dht>=3.7.0
+Adafruit-PureIO>=1.1.11

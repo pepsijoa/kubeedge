@@ -1,0 +1,37 @@
+apiVersion: devices.kubeedge.io/v1beta1
+kind: Device
+metadata:
+  name: my-doorlock
+  namespace: default
+  labels:
+    description: smart-doorlock
+    manufacturer: kubeedge
+spec:
+  deviceModelRef:
+    name: doorlock-model
+  nodeName: raspberrypi-temp
+  protocol:
+    modbus:
+      slaveID: 1
+    common:
+      com:
+        serialPort: '/dev/ttyUSB0'
+        baudRate: 9600
+        dataBits: 8
+        parity: none
+        stopBits: 1
+  properties:
+    - name: temperature
+      desired:
+        value: "0.0"
+        metadata:
+          type: float
+      reportToCloud: true
+      collectCycle: 30000000000
+      reportCycle: 30000000000
+    - name: password
+      desired:
+        value: "0000"
+        metadata:
+          type: string
+      reportToCloud: true

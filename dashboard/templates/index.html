@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KubeEdge 디바이스 관리</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f0f2f5; margin: 0; padding: 20px; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        h1 { color: #1a202c; text-align: center; margin-bottom: 40px; }
+        
+        /* 그리드 레이아웃 */
+        .device-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        /* 디바이스 카드 스타일 */
+        .device-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-align: center;
+        }
+        .device-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        }
+        .device-icon { font-size: 48px; margin-bottom: 15px; }
+        .device-name { font-size: 18px; font-weight: bold; color: #2d3748; margin-bottom: 10px; }
+        .device-status { font-size: 14px; color: #718096; }
+        .status-active { color: #38a169; font-weight: bold; }
+        
+        /* 모달 스타일 */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 400px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            position: relative;
+            text-align: center;
+        }
+        .close-btn {
+            position: absolute;
+            top: 15px; right: 20px;
+            font-size: 24px;
+            cursor: pointer;
+            color: #a0aec0;
+        }
+        .close-btn:hover { color: #2d3748; }
+        
+        /* 상세 정보 스타일 */
+        .detail-item {
+            background: #f7fafc;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+        .detail-label { font-size: 14px; color: #718096; margin-bottom: 5px; }
+        .detail-value { font-size: 24px; font-weight: bold; color: #3182ce; }
+        
+        /* 입력 및 버튼 */
+        .control-group { margin-top: 25px; border-top: 1px solid #e2e8f0; padding-top: 20px; }
+        input {
+            padding: 10px;
+            border: 1px solid #cbd5e0;
+            border-radius: 6px;
+            width: 60%;
+            margin-right: 5px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #3182ce;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.2s;
+        }
+        button:hover { background-color: #2b6cb0; }
+        
+        .empty-state {
+            text-align: center;
+            grid-column: 1 / -1;
+            padding: 40px;
+            color: #718096;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>📱 KubeEdge 디바이스 대시보드</h1>
+        
+        <div id="device-grid" class="device-grid">
+            <div class="empty-state">
+                <h3>연결된 디바이스를 찾는 중...</h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- 상세 정보 모달 -->
+    <div id="detail-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title">디바이스 상세</h2>
+            
+            <div class="detail-item">
+                <div class="detail-label">현재 온도</div>
+                <div id="modal-temp" class="detail-value">-- °C</div>
+            </div>
+
+            <div class="detail-item">
+                <div class="detail-label">현재 비밀번호</div>
+                <div id="modal-pwd" class="detail-value">----</div>
+            </div>
+            
+            <div style="margin-top: 15px; font-size: 12px; color: #a0aec0;" id="last-update">
+                마지막 업데이트: -
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const socket = io();
+        let currentDeviceName = null;
+        const devices = {}; // 로컬 상태 저장소
+
+        // 1. 초기 데이터 로드
+        fetch('/api/devices')
+            .then(res => res.json())
+            .then(data => {
+                const grid = document.getElementById('device-grid');
+                if (data.length > 0) grid.innerHTML = ''; // 로딩 메시지 제거
+                
+                data.forEach(device => {
+                    updateDeviceCard(device);
+                });
+            });
+
+        // 2. 실시간 업데이트 수신
+        socket.on('device_update', function(device) {
+            console.log('Update received:', device);
+            updateDeviceCard(device);
+            
+            // 현재 모달이 열려있는 디바이스라면 모달 내용도 업데이트
+            if (currentDeviceName === device.name) {
+                updateModalContent(device);
+            }
+        });
+
+        // 3. 디바이스 카드 생성/업데이트
+        function updateDeviceCard(device) {
+            devices[device.name] = device; // 상태 저장
+            
+            let card = document.getElementById(`card-${device.name}`);
+            
+            if (!card) {
+                // 새 카드 생성
+                const grid = document.getElementById('device-grid');
+                // 빈 상태 메시지 제거
+                if (grid.querySelector('.empty-state')) grid.innerHTML = '';
+                
+                card = document.createElement('div');
+                card.id = `card-${device.name}`;
+                card.className = 'device-card';
+                card.onclick = () => openModal(device.name);
+                
+                card.innerHTML = `
+                    <div class="device-icon">🔐</div>
+                    <div class="device-name">${device.name}</div>
+                    <div class="device-status status-active">● Online</div>
+                `;
+                grid.appendChild(card);
+            }
+        }
+
+        // 4. 모달 열기
+        function openModal(deviceName) {
+            currentDeviceName = deviceName;
+            const device = devices[deviceName];
+            
+            document.getElementById('modal-title').innerText = device.name;
+            updateModalContent(device);
+            
+            document.getElementById('detail-modal').style.display = 'flex';
+        }
+
+        // 5. 모달 내용 업데이트
+        function updateModalContent(device) {
+            document.getElementById('modal-temp').innerText = (device.temperature || '--') + ' °C';
+            document.getElementById('modal-pwd').innerText = device.password || '----';
+            document.getElementById('last-update').innerText = '마지막 업데이트: ' + (device.last_update || '알 수 없음');
+        }
+
+        // 6. 모달 닫기
+        function closeModal() {
+            document.getElementById('detail-modal').style.display = 'none';
+            currentDeviceName = null;
+        }
+
+        // 모달 외부 클릭 시 닫기
+        window.onclick = function(event) {
+            const modal = document.getElementById('detail-modal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>

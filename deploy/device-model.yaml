@@ -1,0 +1,16 @@
+apiVersion: devices.kubeedge.io/v1beta1
+kind: DeviceModel
+metadata:
+  name: doorlock-model
+  namespace: default
+spec:
+  properties:
+    - name: temperature
+      description: Current temperature reading from sensor
+      type: FLOAT
+      accessMode: ReadOnly
+      unit: Celsius
+    - name: password
+      description: Doorlock password for access control
+      type: STRING
+      accessMode: ReadWrite

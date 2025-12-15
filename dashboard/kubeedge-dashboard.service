@@ -1,0 +1,15 @@
+[Unit]
+Description=KubeEdge Dashboard Service
+After=network.target k3s.service
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/home/kkw/kubeEdge/dashboard
+ExecStart=/home/kkw/kubeEdge/dashboard/venv/bin/python3 /home/kkw/kubeEdge/dashboard/dashboard.py
+Restart=on-failure
+RestartSec=10
+Environment="KUBECONFIG=/etc/rancher/k3s/k3s.yaml"
+
+[Install]
+WantedBy=multi-user.target

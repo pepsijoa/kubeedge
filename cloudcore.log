@@ -1,0 +1,1914 @@
+I1215 17:56:47.066002    9328 server.go:98] Version: v0.0.0-master+$Format:%h$
+I1215 17:56:47.068315    9328 monitor.go:98] starting monitor server on addr: 127.0.0.1:9091
+I1215 17:56:56.228737    9328 config.go:37] succeed in loading CA certificate from local directory
+I1215 17:56:56.229637    9328 config.go:45] succeed in loading CA key from local directory
+I1215 17:56:56.230283    9328 config.go:60] succeed in loading certificate from local directory
+I1215 17:56:56.230841    9328 config.go:68] succeed in loading private key from local directory
+I1215 17:56:56.231160    9328 module.go:54] Module cloudhub registered successfully
+I1215 17:56:56.281028    9328 module.go:54] Module edgecontroller registered successfully
+I1215 17:56:56.281251    9328 module.go:54] Module devicecontroller registered successfully
+W1215 17:56:56.281573    9328 module.go:57] Module taskmanager is disabled, do not register
+I1215 17:56:56.281640    9328 module.go:54] Module synccontroller registered successfully
+I1215 17:56:56.281866    9328 module.go:54] Module cloudStream registered successfully
+W1215 17:56:56.281884    9328 module.go:57] Module router is disabled, do not register
+I1215 17:56:56.281905    9328 eventhandler.go:74] [metaserver/HandlerCenter] prepare a new resourceEventHandler(/v1, Resource=nodes)
+I1215 17:56:56.281947    9328 eventhandler.go:119] [metaserver/resourceEventHandler] handler(/v1, Resource=nodes) init, prepare informer...
+I1215 17:56:56.394891    9328 eventhandler.go:141] [metaserver/resourceEventHandler] handler(/v1, Resource=nodes) init successfully, start to dispatch events to it's listeners
+I1215 17:56:56.395048    9328 eventhandler.go:74] [metaserver/HandlerCenter] prepare a new resourceEventHandler(/v1, Resource=services)
+I1215 17:56:56.395090    9328 eventhandler.go:119] [metaserver/resourceEventHandler] handler(/v1, Resource=services) init, prepare informer...
+I1215 17:56:56.496116    9328 eventhandler.go:141] [metaserver/resourceEventHandler] handler(/v1, Resource=services) init successfully, start to dispatch events to it's listeners
+W1215 17:56:56.496240    9328 module.go:57] Module dynamiccontroller is disabled, do not register
+I1215 17:56:56.496833    9328 policycontroller.go:69] setup policy controller
+W1215 17:56:56.504312    9328 module.go:57] Module policycontroller is disabled, do not register
+I1215 17:56:56.510553    9328 core.go:52] starting module synccontroller
+I1215 17:56:56.510750    9328 core.go:52] starting module cloudStream
+I1215 17:56:56.510835    9328 core.go:52] starting module cloudhub
+I1215 17:56:56.510878    9328 core.go:52] starting module edgecontroller
+I1215 17:56:56.510901    9328 core.go:52] starting module devicecontroller
+I1215 17:56:56.511274    9328 downstream.go:386] Start downstream devicecontroller
+I1215 17:56:56.511437    9328 upstream.go:139] start upstream controller
+I1215 17:56:56.535892    9328 downstream.go:334] start downstream controller
+I1215 17:56:56.612433    9328 synccontroller.go:171] ObjectSync raspberrypi-temp.8e693c29-ba60-4d48-bc77-8025c7648a10 will be deleted since node raspberrypi-temp has been deleted
+W1215 17:56:56.614222    9328 iptables.go:152] failed to delete all rules in tunnel port iptables chain: error flushing chain "TUNNEL-PORT": exit status 1: Ignoring deprecated --wait-interval option.
+iptables: No chain/target/match by that name.
+I1215 17:56:56.639650    9328 synccontroller.go:171] ObjectSync raspberrypi-temp.99a5a0f7-c96d-4641-b15f-3a1a620da231 will be deleted since node raspberrypi-temp has been deleted
+W1215 17:56:56.672295    9328 message_dispatcher.go:508] message pool for edge node raspberrypi-temp not found and created now
+I1215 17:56:56.707700    9328 tunnelserver.go:172] Succeed in loading TunnelCA from local directory
+I1215 17:56:56.707906    9328 tunnelserver.go:184] Succeed in loading TunnelCert and Key from local directory
+I1215 17:56:56.708377    9328 tunnelserver.go:208] Prepare to start tunnel server ...
+I1215 17:56:56.708478    9328 streamserver.go:407] Prepare to start stream server ...
+I1215 17:56:56.735922    9328 pre_server.go:189] token created successfully
+I1215 17:56:56.736082    9328 server.go:45] start unix domain socket server
+I1215 17:56:56.737493    9328 server.go:66] Starting cloudhub websocket server
+I1215 17:56:56.742198    9328 uds.go:71] listening on: //var/lib/kubeedge/kubeedge.sock
+I1215 17:56:58.512514    9328 upstream.go:66] Start upstream devicecontroller
+E1215 17:58:31.366990    9328 certs.go:72] failed to sign certs for edgenode raspberrypi-temp, err: fail to signCerts, err: failed to parse CA private key, err: x509: failed to parse private key (use ParsePKCS1PrivateKey instead for this key format)
+E1215 17:58:40.996308    9328 certs.go:72] failed to sign certs for edgenode raspberrypi-temp, err: fail to signCerts, err: failed to parse CA private key, err: x509: failed to parse private key (use ParsePKCS1PrivateKey instead for this key format)
+E1215 17:58:51.412654    9328 certs.go:72] failed to sign certs for edgenode raspberrypi-temp, err: fail to signCerts, err: failed to parse CA private key, err: x509: failed to parse private key (use ParsePKCS1PrivateKey instead for this key format)
+E1215 17:59:01.945266    9328 certs.go:72] failed to sign certs for edgenode raspberrypi-temp, err: fail to signCerts, err: failed to parse CA private key, err: x509: failed to parse private key (use ParsePKCS1PrivateKey instead for this key format)
+E1215 17:59:12.380064    9328 certs.go:72] failed to sign certs for edgenode raspberrypi-temp, err: fail to signCerts, err: failed to parse CA private key, err: x509: failed to parse private key (use ParsePKCS1PrivateKey instead for this key format)
+E1215 17:59:22.890818    9328 certs.go:72] failed to sign certs for edgenode raspberrypi-temp, err: fail to signCerts, err: failed to parse CA private key, err: x509: failed to parse private key (use ParsePKCS1PrivateKey instead for this key format)
+E1215 17:59:33.449802    9328 certs.go:72] failed to sign certs for edgenode raspberrypi-temp, err: fail to signCerts, err: failed to parse CA private key, err: x509: failed to parse private key (use ParsePKCS1PrivateKey instead for this key format)
+E1215 17:59:43.890029    9328 certs.go:72] failed to sign certs for edgenode raspberrypi-temp, err: fail to signCerts, err: failed to parse CA private key, err: x509: failed to parse private key (use ParsePKCS1PrivateKey instead for this key format)
+E1215 17:59:54.408988    9328 certs.go:72] failed to sign certs for edgenode raspberrypi-temp, err: fail to signCerts, err: failed to parse CA private key, err: x509: failed to parse private key (use ParsePKCS1PrivateKey instead for this key format)
+E1215 18:00:04.914876    9328 certs.go:72] failed to sign certs for edgenode raspberrypi-temp, err: fail to signCerts, err: failed to parse CA private key, err: x509: failed to parse private key (use ParsePKCS1PrivateKey instead for this key format)
+E1215 18:00:15.432241    9328 certs.go:72] failed to sign certs for edgenode raspberrypi-temp, err: fail to signCerts, err: failed to parse CA private key, err: x509: failed to parse private key (use ParsePKCS1PrivateKey instead for this key format)
+E1215 18:00:25.868455    9328 certs.go:72] failed to sign certs for edgenode raspberrypi-temp, err: fail to signCerts, err: failed to parse CA private key, err: x509: failed to parse private key (use ParsePKCS1PrivateKey instead for this key format)
+E1215 18:00:36.405420    9328 certs.go:72] failed to sign certs for edgenode raspberrypi-temp, err: fail to signCerts, err: failed to parse CA private key, err: x509: failed to parse private key (use ParsePKCS1PrivateKey instead for this key format)
+E1215 18:00:46.882042    9328 certs.go:72] failed to sign certs for edgenode raspberrypi-temp, err: fail to signCerts, err: failed to parse CA private key, err: x509: failed to parse private key (use ParsePKCS1PrivateKey instead for this key format)
+E1215 18:00:57.393154    9328 certs.go:72] failed to sign certs for edgenode raspberrypi-temp, err: fail to signCerts, err: failed to parse CA private key, err: x509: failed to parse private key (use ParsePKCS1PrivateKey instead for this key format)
+I1215 18:01:07.442892    9328 core.go:62] Get os signal terminated
+W1215 18:01:07.443598    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.444006    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.444049    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.444065    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.444080    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.444093    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.444105    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.444118    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.444131    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.444144    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.444157    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.444169    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.444182    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.444194    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.444217    9328 downstream.go:101] Stop edgecontroller downstream syncConfigMap loop
+W1215 18:01:07.444244    9328 downstream.go:248] Stop edgecontroller downstream syncRule loop
+W1215 18:01:07.444310    9328 downstream.go:206] Stop edgecontroller downstream syncEdgeNodes loop
+W1215 18:01:07.444346    9328 upstream.go:1416] stop processCSR
+W1215 18:01:07.444362    9328 upstream.go:1416] stop processCSR
+W1215 18:01:07.444377    9328 upstream.go:1416] stop processCSR
+W1215 18:01:07.444391    9328 upstream.go:1416] stop processCSR
+W1215 18:01:07.444415    9328 upstream.go:1180] stop createPod
+W1215 18:01:07.444431    9328 upstream.go:1180] stop createPod
+W1215 18:01:07.444444    9328 upstream.go:1180] stop createPod
+W1215 18:01:07.444457    9328 upstream.go:1180] stop createPod
+W1215 18:01:07.444479    9328 upstream.go:349] stop updateRuleStatus
+W1215 18:01:07.444494    9328 upstream.go:349] stop updateRuleStatus
+W1215 18:01:07.444507    9328 upstream.go:349] stop updateRuleStatus
+W1215 18:01:07.444535    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.444550    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.444628    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.444656    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.444674    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.444683    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.444691    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.444698    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.444705    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.444713    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.444720    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.444728    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.444735    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.444743    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.444751    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.444758    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.444765    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.444773    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.444781    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.444788    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.444805    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.444813    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.444834    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.444843    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.444850    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.444857    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.444865    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.444884    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.444899    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.444917    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.444916    9328 downstream.go:56] Stop edgecontroller downstream syncPod loop
+W1215 18:01:07.444931    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.444945    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.444954    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.444962    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.444972    9328 upstream.go:1304] stop create or update lease
+I1215 18:01:07.444973    9328 upstream.go:117] Stop updateDeviceStatus
+W1215 18:01:07.444984    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.444993    9328 upstream.go:1379] stop queryLease
+I1215 18:01:07.444995    9328 downstream.go:107] Stop syncDevice
+W1215 18:01:07.445000    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.445007    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.445010    9328 downstream.go:153] Stop edgecontroller downstream syncSecret loop
+W1215 18:01:07.445014    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.445021    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.445028    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.445035    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.445043    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.445052    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.445061    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.445073    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.445081    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.445091    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.445099    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.445112    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.445124    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.445134    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.445148    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.445156    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.445164    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.445173    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.445181    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.445198    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.445221    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.445234    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.445246    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.445265    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.445285    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.445299    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.445313    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.445325    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.445338    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.445348    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.445358    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.445365    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.445379    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.445389    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.445405    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.445414    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.445429    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.445441    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.445457    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.445467    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.445481    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.445492    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.445504    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.445516    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.445527    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.445538    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.445553    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.445567    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.445575    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.445590    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.460926    9328 upstream.go:922] stop queryVolumeAttachment
+W1215 18:01:07.460991    9328 upstream.go:922] stop queryVolumeAttachment
+W1215 18:01:07.461019    9328 upstream.go:910] stop queryPersistentVolumeClaim
+W1215 18:01:07.461041    9328 upstream.go:910] stop queryPersistentVolumeClaim
+W1215 18:01:07.461069    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.461090    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.461116    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.461138    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.461166    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.461187    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.461216    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.461251    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.461269    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.461290    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.461310    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.461336    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.461357    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.461382    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.445601    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.445615    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.445624    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.445632    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.445643    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.445657    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.445668    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.446436    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.446470    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.446486    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.446505    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.446513    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.446522    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.446529    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.446536    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.446552    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.446562    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.446562    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.446576    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.446585    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.446584    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.446601    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.446614    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.446627    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.446630    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.446636    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.446639    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.446645    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.446646    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.446656    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.446656    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.446662    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.446665    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.446666    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.446674    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.446676    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.446678    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.446682    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.446685    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.446689    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.446693    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.446694    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.446697    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.446705    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.446709    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.446713    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.446714    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.446723    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.446724    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.446728    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.446736    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.446737    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.446744    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.446747    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.446755    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.446758    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.446758    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.446768    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.446772    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.446773    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.446776    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.446781    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.446784    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.446789    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.446790    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.446791    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.446797    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.446799    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.446805    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.446804    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.446806    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.446820    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.446821    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.446829    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.446830    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.446835    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.446838    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.446845    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.446849    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.446850    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.446852    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.446859    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.446864    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.446866    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.446872    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.446872    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.446879    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.446881    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.446886    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.446893    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.446894    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.446899    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.446900    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.446903    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.446906    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.446913    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.446915    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.446915    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.446978    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.446983    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.446987    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.446987    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.446996    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.446997    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447003    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.447004    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447005    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447013    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447013    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447019    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.447021    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447027    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.447029    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447034    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.447037    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447038    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.447046    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447052    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.447054    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.447056    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447064    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447065    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447070    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.447074    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.447074    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447089    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447090    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.447094    9328 upstream.go:349] stop updateRuleStatus
+W1215 18:01:07.447098    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447098    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.447106    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447111    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.447115    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.447120    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.447121    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.447130    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.447131    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.447132    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.447139    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.447142    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.447145    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.447150    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.447153    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447158    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.447163    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.447165    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.447166    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.447174    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.447175    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447177    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.447184    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447191    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.447193    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447197    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447206    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.447210    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.447210    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.447219    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.447221    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447227    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.447233    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.447237    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.447242    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.447243    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447250    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.447253    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.447258    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.447258    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.447263    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447266    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.447273    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.447276    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.447276    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447285    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.447286    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447289    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.447293    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.447298    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.447300    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.447303    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.447308    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.447308    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.447318    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.447318    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.447322    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447333    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.447337    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447338    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447346    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.447347    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.447352    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.447361    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447362    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447370    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447371    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447375    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.447380    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447383    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.447388    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447391    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.447391    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447400    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.447401    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.447405    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.447409    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.447409    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.447417    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.447418    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.447419    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.447424    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.447426    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.447432    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.447435    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.447440    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.447441    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447448    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.447455    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.447458    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447462    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.447469    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.447474    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.447483    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447490    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.447492    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447501    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447504    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.447512    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.447450    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447521    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447524    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.447535    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.447537    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447541    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.447542    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.447552    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447553    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.447556    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.447562    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.447569    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.447569    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.447571    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.447580    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447586    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.447589    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.447600    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.447606    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447615    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.447616    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.447628    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447630    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.447637    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.447643    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.447653    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447662    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.447663    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.447671    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.447677    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.447684    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.447688    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.447699    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.447702    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447707    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447713    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.447715    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447721    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.447724    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447729    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.447734    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447738    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447742    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.447743    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447750    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.447751    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447757    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.447760    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447767    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447768    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447772    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.447777    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447778    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.447784    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447791    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.447793    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447794    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447800    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447799    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.447806    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.447809    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447815    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.447816    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447819    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.447824    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447832    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.447832    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447837    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.447841    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447842    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.447849    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447851    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.447853    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.447857    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447866    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447868    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.447870    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447875    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447883    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447883    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.447883    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447891    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447899    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447900    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.447907    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.447913    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447915    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.447919    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.447921    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447928    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447934    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.447934    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.447936    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447944    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.447950    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.447954    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.447955    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.447965    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.447970    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.447974    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447980    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.447980    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.447985    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.447995    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.447996    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.447998    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448006    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448010    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.448014    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448018    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448022    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448025    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.448027    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448030    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448038    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448040    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.448040    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.448046    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448054    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448055    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448062    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448066    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448065    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.448070    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448079    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448079    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448082    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.448088    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448091    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448095    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448097    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.448105    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448106    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.448106    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.448113    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448117    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.448121    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448124    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.448126    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.448130    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448132    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.448138    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448139    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.448143    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.448147    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448147    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.448155    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448156    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.448158    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.448163    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448166    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.448174    9328 upstream.go:1379] stop queryLease
+W1215 18:01:07.448172    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448177    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.448189    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448194    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.448198    9328 downstream.go:292] Stop edgecontroller downstream syncRuleEndpoint loop
+W1215 18:01:07.448200    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448211    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448214    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.448218    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.448219    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448227    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448229    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.448233    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.448236    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448246    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448251    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.448251    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.448255    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448264    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448268    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.448272    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448276    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.448275    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.448284    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.448289    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.448292    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.448295    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.448301    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.448302    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448304    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.448311    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448312    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.448317    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.448321    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.448322    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448329    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.448333    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.448336    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448336    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.448348    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448350    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.448357    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448372    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448373    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.448381    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448389    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448392    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.448397    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448406    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448409    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.448415    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448425    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.448426    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448435    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448441    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.448443    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448451    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448459    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.448459    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448469    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448474    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.448477    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448491    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.448501    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448507    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.448509    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448518    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448525    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.448526    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448536    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448541    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.448544    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448553    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448555    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.448561    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448571    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.448569    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448582    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448587    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.448591    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448602    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.448617    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.448630    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.448635    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.448638    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.448654    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.448655    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448675    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.448675    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448686    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448690    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.448702    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.448706    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.448723    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.448723    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448740    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.448740    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.448749    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.448757    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.448767    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448772    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.448780    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448790    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.448790    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.448810    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.448813    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.448822    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.448828    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.448839    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448847    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.448850    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448861    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448863    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.448869    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448877    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448879    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.448886    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448894    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448895    9328 upstream.go:418] stop updatePodStatus
+W1215 18:01:07.448903    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448912    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448920    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448929    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.448944    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.448960    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.448972    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.448974    9328 upstream.go:295] stop processEvent
+W1215 18:01:07.448985    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.448994    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.448998    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.449014    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.449015    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449031    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.449035    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.449046    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.449054    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.449061    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449070    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.449071    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449080    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449086    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.449089    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449097    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449102    9328 upstream.go:295] stop processEvent
+W1215 18:01:07.449108    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449117    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449119    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.449125    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449133    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449133    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.449141    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449150    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.449150    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449159    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449166    9328 upstream.go:295] stop processEvent
+W1215 18:01:07.449167    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449175    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449182    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.449183    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449197    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449201    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.449206    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449215    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449221    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.449223    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449232    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449236    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.449240    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449247    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449255    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449251    9328 upstream.go:295] stop processEvent
+W1215 18:01:07.449264    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449273    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449273    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.449281    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449288    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449289    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.449298    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449305    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.449308    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449316    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449319    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.449324    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449332    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449333    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.449341    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449349    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449357    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449362    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.449365    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449372    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449380    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.449380    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449389    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449396    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.449397    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449405    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449410    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.449413    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449420    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449425    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.449428    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449439    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.449440    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449448    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449454    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.449456    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449464    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449469    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.449473    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449478    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.449481    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449489    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449499    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.449500    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449516    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449525    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449526    9328 upstream.go:581] stop updateNodeStatus
+W1215 18:01:07.449533    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449541    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449545    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.449549    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449557    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449565    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449569    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449573    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449582    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449590    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449599    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449607    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449615    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449623    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449637    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449646    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449654    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449666    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449676    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449684    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449692    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449702    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449710    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449718    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449726    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449741    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449754    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449764    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449772    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449781    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449789    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449798    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449806    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449814    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449822    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449836    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449846    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449855    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449864    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449873    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449870    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449892    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449894    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.449900    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449909    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449910    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449917    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449919    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449927    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449929    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449935    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449937    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449942    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449951    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449960    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449968    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449976    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.449976    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449984    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449990    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.449993    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.449998    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450001    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.450006    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450010    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.450014    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450019    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.450021    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450027    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.450030    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450035    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.450038    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450044    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.450045    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450052    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.450058    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450061    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.450065    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450069    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.450074    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450077    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.450086    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.450086    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450094    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.450096    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450103    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.450104    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450112    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.450115    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450121    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.450129    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.450130    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.450137    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.450144    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450145    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.450153    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.450159    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450169    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.450175    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450178    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.450186    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.450188    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450194    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.450198    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450202    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.450225    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.450225    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.450245    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.450247    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450256    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.450259    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450265    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.450268    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450286    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450293    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.450295    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450308    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450303    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.450315    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450321    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.450323    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450331    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.450333    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450339    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.450343    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450349    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.450351    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450358    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.450361    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450366    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.450368    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450376    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.450380    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450384    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.450388    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450392    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.450396    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450400    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.450403    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450409    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.450412    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450418    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.450421    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450425    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.450428    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450434    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.450441    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.450448    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.450449    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.450456    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.450457    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.450464    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.450468    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.450472    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.450485    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.450487    9328 upstream.go:1037] stop updateNode
+W1215 18:01:07.450495    9328 upstream.go:1037] stop updateNode
+W1215 18:01:07.450513    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450493    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.450527    9328 upstream.go:1037] stop updateNode
+W1215 18:01:07.450537    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.450547    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.450548    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.450565    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.450556    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.450579    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.450585    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.450595    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.450599    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.450610    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.450613    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.450623    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.450634    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.450643    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450650    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.450657    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450665    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.450667    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450675    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450680    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.450687    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450695    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450695    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.450703    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450711    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450712    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.450719    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450720    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.450726    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450735    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450742    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450750    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450748    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.450758    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450765    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450767    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.450774    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450781    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450787    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.450789    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450796    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450804    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.450804    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450819    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.450826    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.450833    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.450840    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450850    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450848    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.450858    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450866    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450875    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450879    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.450883    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450896    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.450901    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.450905    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.450912    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450949    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.450959    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450970    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450978    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450980    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.450986    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.450996    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451004    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.451012    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451015    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.451023    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.451027    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451031    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.451039    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.451042    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451046    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.451054    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.451058    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451063    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.451071    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.451075    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451078    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.451086    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.451089    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451093    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.451102    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.451109    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.451111    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451116    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.451124    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.451127    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451133    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.451142    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.451147    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451161    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451162    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451181    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.451187    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451194    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.451203    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451207    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.451221    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.451224    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.451231    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.451240    9328 upstream.go:1228] stop deletePod
+W1215 18:01:07.451242    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451256    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451281    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451282    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.451297    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451301    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451312    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451322    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.451327    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451339    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451348    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451356    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.451362    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451372    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451388    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451383    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451385    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.451403    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451407    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451414    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.451423    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.451425    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.451428    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451431    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.451440    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.451442    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451444    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451448    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.451457    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451456    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.451462    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451468    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.451476    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.451476    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451477    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451484    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.451492    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.451493    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451501    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.451505    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451509    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.451514    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451517    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.451522    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451523    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451525    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.451533    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.451538    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451539    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451541    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.451549    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.451554    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451555    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451557    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.451566    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.451570    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451572    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.451573    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.451583    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.451583    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.451586    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451590    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.451592    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.451601    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.451602    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451615    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451618    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451619    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.451630    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.451631    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.451637    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451640    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.451643    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.451652    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.451652    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451658    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451660    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.451669    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.451673    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451675    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451677    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.451686    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451695    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.451701    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451708    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.451711    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451719    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451728    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.451733    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.451734    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451736    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.451748    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.451750    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451751    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451759    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.451767    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451767    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451774    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.451784    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451786    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.451793    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451799    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451800    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.451808    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451809    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.451819    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.451820    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.451824    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451830    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.451836    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451839    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451840    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.451848    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.451850    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451866    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451870    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.451881    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451884    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.451891    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451896    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.451896    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451908    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.451911    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451913    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451925    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.451926    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451931    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.451936    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.451942    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451945    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.451950    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451953    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.451959    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451961    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451962    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.451970    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.451974    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451977    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.451978    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.451987    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.451991    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.451995    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.452006    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452008    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.452018    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452022    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452027    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.452036    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452037    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.452041    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.452055    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452057    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.452058    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452066    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.452071    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452075    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.452078    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452084    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.452086    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452092    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.452098    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452101    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452110    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452121    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.452126    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452136    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452138    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452141    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452152    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452158    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452217    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452238    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452255    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452269    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452271    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452294    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452303    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452310    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452314    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452326    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452329    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452340    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452345    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452360    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452355    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452368    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452388    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452389    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452403    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452406    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452419    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452422    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452434    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452438    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452453    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452454    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452468    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452469    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452484    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452487    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.452499    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452503    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452515    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452518    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452529    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452539    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452545    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452562    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452565    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.452581    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452584    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452604    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.452603    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.452620    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452625    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452636    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452644    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.452661    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.452670    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.452673    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452689    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452697    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.452708    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.452729    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452732    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452748    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452749    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.452764    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452766    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452779    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452784    9328 upstream.go:1135] stop patchPod
+W1215 18:01:07.452795    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.452802    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.452811    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.452811    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452829    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452833    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452851    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452852    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452869    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452874    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452885    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452898    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.452903    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452918    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452926    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.452938    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.452939    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.452956    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452970    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452971    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452989    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.452998    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.452999    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453018    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453019    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453041    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.453048    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453059    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453065    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453077    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.453094    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453102    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453115    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453111    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453132    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453137    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453142    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453148    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453152    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453164    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453165    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453174    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.453182    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453183    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453192    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453209    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453227    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.453247    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453247    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453266    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.453267    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453289    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453290    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453305    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.453307    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453315    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453333    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453379    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453402    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453419    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453436    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453436    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453463    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453486    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453513    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453516    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453532    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.453536    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453548    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453551    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453565    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.453582    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453597    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453604    9328 upstream.go:1037] stop updateNode
+W1215 18:01:07.453609    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453628    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453639    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453645    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453667    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.453686    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453689    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453707    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453713    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453724    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453730    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.453748    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453740    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453765    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.453863    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453863    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453882    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453891    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453898    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453899    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453917    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453923    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453940    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453941    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453941    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.453963    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453966    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.453982    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453985    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.453988    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.454007    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.454021    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.454048    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.454066    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.454067    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.454088    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.454083    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.454104    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.454124    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.454125    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.454136    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.454142    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.454159    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.454162    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.454178    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.454193    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.454205    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.454211    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.454225    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.454224    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.454228    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.454243    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.454247    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.454249    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.454264    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.454267    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.454278    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.454287    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.454283    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.454307    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.454337    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.454357    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.454372    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.454390    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.454405    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.454419    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.454433    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.454447    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.454475    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.454495    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.454502    9328 upstream.go:1292] stop queryNode
+I1215 18:01:07.455265    9328 downstream.go:59] stop syncDeviceModel
+W1215 18:01:07.455303    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.455320    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.455335    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.455343    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.455351    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.455359    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.455500    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.455726    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.455741    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.455764    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.455783    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.455795    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.455803    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.455810    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.455817    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.455832    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.455840    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.455847    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.455854    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.455861    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.455868    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.455879    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.455887    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.455894    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.455924    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.455942    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.455954    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.455961    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.455968    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.455975    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.455982    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.455989    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.455996    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.456013    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456025    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456033    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456041    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456048    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456056    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456063    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456070    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456078    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456085    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456093    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456100    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456108    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456116    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456123    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456136    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.456145    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456157    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456168    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456176    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456184    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456191    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456199    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456206    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456214    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456222    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456230    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456243    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456252    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456259    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456267    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456275    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456285    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.456294    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456302    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456310    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456318    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456326    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456334    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456344    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456352    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456360    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456368    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456379    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456388    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456404    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456413    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456421    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456428    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456436    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456444    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456452    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456460    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456469    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456477    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456485    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456494    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456502    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456510    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456518    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456525    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456533    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456541    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456556    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456567    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456578    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456585    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456593    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456601    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456626    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456639    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456646    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456653    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456647    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.456662    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456670    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456678    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456686    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456687    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.456694    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456702    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456704    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.456709    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456717    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456720    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.456724    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456735    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.456738    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456746    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456752    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.456753    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456761    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456766    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.456769    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456777    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456780    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.456785    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456793    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456800    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456807    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.456808    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456816    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456824    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456825    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.456832    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456840    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456841    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.456847    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456855    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456862    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.456863    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456877    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.456890    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.456892    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.456905    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.456908    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.456922    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.456923    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.456936    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.456939    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.456955    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.456956    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.456969    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.456971    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.456983    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.456994    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.456997    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457009    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.457015    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457017    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.457032    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.457032    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457045    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457046    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.457060    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457074    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457092    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457106    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457121    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457066    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.457145    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.457155    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.457162    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457170    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.457179    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.457186    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.457197    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457201    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.457214    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.457217    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.457231    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457233    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.457245    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457248    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.457253    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457263    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.457267    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457278    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.457370    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457389    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457404    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457406    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457418    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457424    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.457427    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457433    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457447    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457448    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457455    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457463    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457463    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457479    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457479    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457501    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.457523    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457526    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457540    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457544    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457557    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457560    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457574    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457577    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457598    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457597    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457614    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457625    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.457628    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457642    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457646    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.457664    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457684    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457685    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.457700    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457708    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.457716    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457726    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.457725    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457733    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.457743    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457742    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.457749    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457758    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457761    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.457765    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.457773    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457776    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.457781    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457790    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.457792    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457797    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.457806    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.457814    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457832    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457847    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.457866    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457864    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457882    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457887    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457892    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457901    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457902    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457909    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457915    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457920    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457925    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457930    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457936    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457943    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457944    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457945    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457959    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457960    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457969    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457969    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.457974    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457985    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457986    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.457986    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.458001    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.458002    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.458002    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.458020    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.458036    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.458051    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.458071    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.458075    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.458089    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.458092    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.458104    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.458110    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.458119    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.458125    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.458134    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.458144    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.458149    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.458160    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.458162    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.458175    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.458177    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.458192    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.458196    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.458207    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.458215    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.458221    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.458230    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.458235    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.458239    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.458251    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.458262    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.458265    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.458280    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.458280    9328 upstream.go:910] stop queryPersistentVolumeClaim
+W1215 18:01:07.458300    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.458354    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.458373    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.458379    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.458389    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.458404    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.458403    9328 upstream.go:1304] stop create or update lease
+W1215 18:01:07.458429    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.458429    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.458436    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.458447    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.458450    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.458454    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.458463    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.458466    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.458469    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.458478    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.458483    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.458485    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.458493    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.458506    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.458521    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.458535    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.458551    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.458568    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.458694    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.458725    9328 upstream.go:992] stop patchNode
+W1215 18:01:07.458739    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.458743    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.458743    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.458754    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.458759    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.458767    9328 upstream.go:910] stop queryPersistentVolumeClaim
+W1215 18:01:07.458774    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.458778    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.458788    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.458790    9328 upstream.go:898] stop queryPersistentVolume
+W1215 18:01:07.458793    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.458804    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.458807    9328 upstream.go:898] stop queryPersistentVolume
+W1215 18:01:07.458807    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.458819    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.458827    9328 upstream.go:898] stop queryPersistentVolume
+W1215 18:01:07.458829    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.458834    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.458839    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.458842    9328 upstream.go:898] stop queryPersistentVolume
+W1215 18:01:07.458850    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.458858    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.458860    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.458865    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.458881    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.458882    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.458898    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.458907    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.458961    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.458970    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.458979    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.458995    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.458995    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.459015    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.459011    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.459030    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.459035    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.459065    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.459074    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.459086    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.459089    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.459094    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.459102    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.459111    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.459114    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.459118    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.459127    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.459129    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.459133    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.459138    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.459143    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.459149    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.459156    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.459159    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.459169    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.459172    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.459175    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.459184    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.459188    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.459192    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.459193    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.459203    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.459208    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.459222    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.459272    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.459290    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.459311    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.459311    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.459327    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.459331    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.459347    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.459363    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.459384    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.459393    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.459401    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.459416    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.459418    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.459431    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.459436    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.459447    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.459451    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.459450    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.459466    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.459471    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.459487    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.459487    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.459496    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.459507    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.459508    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.459512    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.459523    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.459529    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.459530    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.459539    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.459544    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.459545    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.459553    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.459559    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.459560    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.459572    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.459575    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.459582    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.459590    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.459591    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.459597    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.459604    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.459608    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.459612    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.459619    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.459623    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.459628    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.459636    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.459645    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.459654    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.460174    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.460175    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.460216    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.460227    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.460231    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.460242    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.460246    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.460248    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.460263    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.460268    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.460279    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.460284    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.460300    9328 upstream.go:840] stop queryConfigMap
+W1215 18:01:07.460320    9328 upstream.go:934] stop registerNode
+W1215 18:01:07.460328    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.460338    9328 upstream.go:864] stop process service account token
+I1215 18:01:07.460363    9328 core.go:68] Cleanup module cloudhub
+W1215 18:01:07.460379    9328 upstream.go:922] stop queryVolumeAttachment
+W1215 18:01:07.460396    9328 upstream.go:922] stop queryVolumeAttachment
+W1215 18:01:07.460514    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.460530    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.460536    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.460549    9328 upstream.go:864] stop process service account token
+W1215 18:01:07.460560    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.460566    9328 upstream.go:852] stop querySecret
+W1215 18:01:07.460575    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.460590    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.460605    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.460620    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.460629    9328 upstream.go:1292] stop queryNode
+W1215 18:01:07.460644    9328 upstream.go:1292] stop queryNode
+F1215 18:01:07.460639    9328 monitor.go:99] http: Server closed

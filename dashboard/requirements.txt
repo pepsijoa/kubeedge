@@ -1,0 +1,6 @@
+kubernetes
+flask
+flask-socketio
+flask-cors
+paho-mqtt
+pytz

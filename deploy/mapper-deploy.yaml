@@ -1,0 +1,105 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: doorlock-mapper
+  namespace: default
+  labels:
+    app: doorlock-mapper
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: doorlock-mapper
+  template:
+    metadata:
+      labels:
+        app: doorlock-mapper
+    spec:
+      nodeName: raspberrypi-temp
+      hostNetwork: true
+      automountServiceAccountToken: false
+      securityContext:
+        supplementalGroups:
+        - 986
+      # Init Container: 배포 전 GPIO cleanup
+      initContainers:
+      - name: gpio-cleanup
+        image: busybox:latest
+        command: 
+        - sh
+        - -c
+        - |
+          echo "GPIO cleanup 시작..."
+          # GPIO 24번 해제 (구버전 호환)
+          if [ -d /sys/class/gpio/gpio24 ]; then
+            echo 24 > /sys/class/gpio/unexport 2>/dev/null || true
+            echo "GPIO 24 해제 완료"
+          fi
+          # GPIO 27번 해제 (DHT11 센서)
+          if [ -d /sys/class/gpio/gpio27 ]; then
+            echo 27 > /sys/class/gpio/unexport 2>/dev/null || true
+            echo "GPIO 27 해제 완료"
+          fi
+          echo "GPIO cleanup 완료"
+        securityContext:
+          privileged: true
+        volumeMounts:
+        - name: sys
+          mountPath: /sys
+      containers:
+      - name: mapper
+        image: doorlock-mapper:latest
+        imagePullPolicy: Never
+        securityContext:
+          privileged: true
+          runAsUser: 0
+          runAsGroup: 986
+          capabilities:
+            add:
+            - SYS_RAWIO
+        # 아두이노 Serial 포트 환경변수
+        env:
+        - name: ARDUINO_PORT
+          value: "/dev/ttyACM0"
+        - name: ARDUINO_BAUD_RATE
+          value: "9600"
+        # Pod 종료 시 GPIO cleanup
+        lifecycle:
+          preStop:
+            exec:
+              command:
+              - sh
+              - -c
+              - |
+                echo "PreStop: GPIO cleanup 시작..."
+                # GPIO 24번 해제
+                if [ -d /sys/class/gpio/gpio24 ]; then
+                  echo 24 > /sys/class/gpio/unexport 2>/dev/null || true
+                fi
+                # GPIO 27번 해제
+                if [ -d /sys/class/gpio/gpio27 ]; then
+                  echo 27 > /sys/class/gpio/unexport 2>/dev/null || true
+                fi
+                sleep 1
+        volumeMounts:
+        - name: dev
+          mountPath: /dev
+        - name: sys
+          mountPath: /sys
+        - name: doorlock-data
+          mountPath: /var/lib/doorlock
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "100m"
+      volumes:
+      - name: dev
+        hostPath:
+          path: /dev
+      - name: sys
+        hostPath:
+          path: /sys
+      - name: doorlock-data
+        hostPath:
+          path: /var/lib/doorlock
+          type: DirectoryOrCreate

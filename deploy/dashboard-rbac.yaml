@@ -1,0 +1,42 @@
+---
+# ServiceAccount for Dashboard Application
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: dashboard-sa
+  namespace: default
+---
+# ClusterRole for accessing KubeEdge Device CRDs
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: device-reader
+rules:
+  # KubeEdge Device CRD 접근 권한
+  - apiGroups: ["devices.kubeedge.io"]
+    resources: ["devices", "devicemodels"]
+    verbs: ["get", "list", "watch", "patch", "update"]
+  
+  # Device status 읽기 및 수정 권한 (Desired 값 변경을 위해)
+  - apiGroups: ["devices.kubeedge.io"]
+    resources: ["devices/status"]
+    verbs: ["get", "patch", "update"]
+  
+  # 기본 리소스 읽기 권한 (디버깅용)
+  - apiGroups: [""]
+    resources: ["pods", "services", "nodes"]
+    verbs: ["get", "list"]
+---
+# ClusterRoleBinding to bind the ClusterRole to ServiceAccount
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: dashboard-device-reader-binding
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: device-reader
+subjects:
+  - kind: ServiceAccount
+    name: dashboard-sa
+    namespace: default

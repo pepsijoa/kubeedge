@@ -1,0 +1,52 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dashboard
+  namespace: default
+  labels:
+    app: dashboard
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      app: dashboard
+  template:
+    metadata:
+      labels:
+        app: dashboard
+    spec:
+      nodeSelector:
+        node-role.kubernetes.io/control-plane: "true"
+      tolerations:
+      - key: node-role.kubernetes.io/control-plane
+        operator: Exists
+        effect: NoSchedule
+      serviceAccountName: dashboard-sa
+      containers:
+      - name: dashboard
+        image: kkw4278/kubeedge-dashboard:v9
+        imagePullPolicy: Always
+        env:
+        - name: KUBERNETES_SERVICE_HOST
+          value: "192.168.0.5"
+        - name: KUBERNETES_SERVICE_PORT
+          value: "6443"
+        ports:
+        - containerPort: 5000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: dashboard-service
+  namespace: default
+spec:
+  selector:
+    app: dashboard
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 5000
+    nodePort: 30000
+  type: NodePort

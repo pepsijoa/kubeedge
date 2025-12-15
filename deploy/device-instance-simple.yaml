@@ -1,0 +1,12 @@
+apiVersion: devices.kubeedge.io/v1beta1
+kind: Device
+metadata:
+  name: my-doorlock
+  namespace: default
+  labels:
+    description: smart-doorlock
+    manufacturer: kubeedge
+spec:
+  deviceModelRef:
+    name: doorlock-model
+  nodeName: raspberrypi-temp

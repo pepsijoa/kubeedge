@@ -1,0 +1,50 @@
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: devices.devices.kubeedge.io
+spec:
+  group: devices.kubeedge.io
+  names:
+    kind: Device
+    listKind: DeviceList
+    plural: devices
+    singular: device
+    shortNames:
+    - dev
+  scope: Namespaced
+  versions:
+  - name: v1beta1
+    served: true
+    storage: true
+    schema:
+      openAPIV3Schema:
+        type: object
+        properties:
+          apiVersion:
+            type: string
+          kind:
+            type: string
+          metadata:
+            type: object
+          spec:
+            type: object
+            properties:
+              deviceModelRef:
+                type: object
+                properties:
+                  name:
+                    type: string
+              nodeName:
+                type: string
+              # 👇 여기가 핵심입니다! 어떤 프로토콜이든 허용하게 만듭니다.
+              protocol:
+                type: object
+                x-kubernetes-preserve-unknown-fields: true
+              properties:
+                type: array
+                items:
+                  type: object
+                  x-kubernetes-preserve-unknown-fields: true
+          status:
+            type: object
+            x-kubernetes-preserve-unknown-fields: true
